@@ -90,6 +90,8 @@ vim.opt.scrolloff = 5
 
 -- Set line length marker
 vim.opt.colorcolumn = '110'
+-- Set wrap length (used with gwip or gwap)
+vim.opt.textwidth = 110
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
