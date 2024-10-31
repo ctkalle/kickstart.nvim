@@ -755,6 +755,7 @@ require('lazy').setup({
   require 'custom.plugins.vim-tmux-navigator',
   require 'custom.plugins.bufferline',
   require 'custom.plugins.oil',
+  require 'custom.plugins.markview',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
