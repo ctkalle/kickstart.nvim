@@ -16,6 +16,10 @@ vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('n', '<leader>x', '<Cmd>bd<CR>', { desc = 'Close current buffer' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 
-local builtin = require 'telescope.builtin'
-vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = '[S]earch [B]uffers' })
-vim.keymap.set('n', '<leader>sc', builtin.command_history, { desc = '[S]earch [C]ommand History' })
+-- Reload files changed on disk (e.g. by a coding agent running in another tmux pane)
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter', 'CursorHold' }, {
+  desc = 'Reload buffers changed outside of Neovim',
+  group = vim.api.nvim_create_augroup('custom-autoread', { clear = true }),
+  command = 'silent! checktime',
+})
