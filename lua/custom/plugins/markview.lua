@@ -1,13 +1,2 @@
-return {
-  {
-    'OXY2DEV/markview.nvim',
-    branch = 'main',
-    lazy = false, -- Recommended
-    -- ft = "markdown" -- If you decide to lazy-load anyway
-
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter',
-      'nvim-tree/nvim-web-devicons',
-    },
-  },
-}
+-- Do not call this lazily: markview handles lazy loading itself.
+vim.pack.add { 'https://github.com/OXY2DEV/markview.nvim' }

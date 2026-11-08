@@ -1,18 +1,3 @@
-return {
-  'christoomey/vim-tmux-navigator',
-  lazy = false,
-  cmd = {
-    'TmuxNavigateLeft',
-    'TmuxNavigateDown',
-    'TmuxNavigateUp',
-    'TmuxNavigateRight',
-    'TmuxNavigatePrevious',
-  },
-  keys = {
-    { '<c-h>', '<cmd><C-U>TmuxNavigateLeft<cr>' },
-    { '<c-j>', '<cmd><C-U>TmuxNavigateDown<cr>' },
-    { '<c-k>', '<cmd><C-U>TmuxNavigateUp<cr>' },
-    { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
-    { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
-  },
-}
+-- Sets its own <C-h/j/k/l/\> mappings when its plugin/ file is sourced, after init.lua,
+-- so they replace the window navigation mappings from init.lua.
+vim.pack.add { 'https://github.com/christoomey/vim-tmux-navigator' }
