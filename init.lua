@@ -735,7 +735,7 @@ do
   local servers = {
     -- clangd = {},
     gopls = {},
-    jdtls = { cmd_env = { JAVA_HOME = '/opt/homebrew/opt/openjdk@25/libexec/openjdk.jdk/Contents/Home' } }, -- jdtls >= 1.63 needs Java 25
+    jdtls = {}, -- jdtls >= 1.63 needs Java 25: point $JAVA_HOME at a JDK 25 in your shell profile
     -- pyright = {},
     -- tsc = {},
     --
